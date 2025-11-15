@@ -5,180 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carros Ícones de Velozes e Furiosos</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        
-        body {
-            background-color: #0a0a0a;
-            color: #fff;
-        }
-        
-        header {
-            background: linear-gradient(90deg, #e10600 0%, #000000 100%);
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 2px solid #e10600;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .subtitle {
-            font-style: italic;
-            color: #ccc;
-        }
-        
-        .tabs {
-            display: flex;
-            justify-content: center;
-            background-color: #111;
-            padding: 15px 0;
-            border-bottom: 1px solid #333;
-        }
-        
-        .tab-btn {
-            background-color: #222;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            cursor: pointer;
-            border-radius: 5px 5px 0 0;
-            transition: all 0.3s;
-            font-weight: bold;
-        }
-        
-        .tab-btn:hover {
-            background-color: #e10600;
-        }
-        
-        .tab-btn.active {
-            background-color: #e10600;
-        }
-        
-        .tab-content {
-            display: none;
-            padding: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .car-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 20px;
-        }
-        
-        .car-image {
-            flex: 1;
-            min-width: 300px;
-            height: 400px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .car-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .car-image img:hover {
-            transform: scale(1.05);
-        }
-        
-        .car-info {
-            flex: 1;
-            min-width: 300px;
-            background-color: #111;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .car-info h2 {
-            color: #e10600;
-            margin-bottom: 15px;
-            font-size: 2rem;
-        }
-        
-        .car-info p {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        
-        .specs {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #222;
-            border-radius: 5px;
-        }
-        
-        .specs h3 {
-            color: #e10600;
-            margin-bottom: 10px;
-        }
-        
-        .specs ul {
-            list-style-type: none;
-        }
-        
-        .specs li {
-            padding: 5px 0;
-            border-bottom: 1px solid #333;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #111;
-            margin-top: 30px;
-            border-top: 1px solid #333;
-        }
-        
-        .cu {
-            color: red;
-        }
-        a {
-            text-decoration: none;
-        }
 
-        @media (max-width: 768px) {
-            .car-container {
-                flex-direction: column;
-            }
-            
-            .tabs {
-                flex-wrap: wrap;
-            }
-            
-            .tab-btn {
-                margin: 5px;
-                flex: 1 0 auto;
-            }
-        }
-    </style>
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -194,10 +23,12 @@
         <button class="tab-btn" data-tab="rx7">RX-7</button>
     </div>
     
+    <!-- Conteúdos das abas (iguais ao original) -->
+    <!-- TORETTO -->
     <div class="tab-content active" id="toretto">
         <div class="car-container">
             <div class="car-image">
-                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/91c71cb2-bac9-4d4d-9965-a421296e5be6/d8vrkbw-a86bf132-a29f-4d11-b731-c2622a2efcce.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkxYzcxY2IyLWJhYzktNGQ0ZC05OTY1LWE0MjEyOTZlNWJlNlwvZDh2cmtidy1hODZiZjEzMi1hMjlmLTRkMTEtYjczMS1jMjYyMmEyZWZjY2UuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.NV2nvmyOPznFZJN3AKd3JmHT-NXYyp3bIcecgT470hQ" alt="Dodge Charger 1970 preto com listras brancas, motor supercharger exposto, rodas clássicas, estilo muscle car americano, cena noturna com iluminação de neon">
+                <img src="fastandfurious.fandomChargerToretto.webp" alt="Dodge Charger 1970 preto">
             </div>
             <div class="car-info">
                 <h2>Dodge Charger R/T 1970</h2>
@@ -219,21 +50,21 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- SUPRA -->
     <div class="tab-content" id="brian1">
         <div class="car-container">
             <div class="car-image">
-                <img src="https://i.ytimg.com/vi/N890MHu3L4s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCqiKD39RvjmGCH0eiRnnqlkUg0kQ" alt="Toyota Supra MK4 laranja com detalhes pretos, asa traseira grande, rodas de liga leve, estilo tunado, cena urbana com asfalto molhado">
+                <img src="https://i.ytimg.com/vi/N890MHu3L4s/hq720.jpg" alt="Toyota Supra laranja">
             </div>
             <div class="car-info">
                 <h2>Toyota Supra MK4 (1994)</h2>
                 <p>O carro que Brian O'Conner usou para desafiar Dominic Toretto no primeiro filme. Originalmente um veículo apreendido pela polícia, Brian o modificou com peças da NOS para alcançar incríveis 1000 cavalos de potência.</p>
-                
                 <div class="specs">
                     <h3>Especificações Técnicas</h3>
                     <ul>
-                        <li><strong>Motor:</strong> 2JZ-GTE 3.0L Twin-Turbo</li>
-                        <li><strong>Potência:</strong> 1000 HP (com NOS)</li>
+                        <li><strong>Motor:</strong> 2JZ-GTE</li>
+                        <li><strong>Potência:</strong> 1000 HP</li>
                         <li><strong>Torque:</strong> 950 Nm</li>
                         <li><strong>Transmissão:</strong> Manual 6 velocidades</li>
                         <li><strong>0-100 km/h:</strong> 3.1 segundos</li>
@@ -245,21 +76,21 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- ECLIPSE -->
     <div class="tab-content" id="eclipse">
         <div class="car-container">
             <div class="car-image">
-                <img src="https://i.pinimg.com/736x/34/65/90/3465904f04e726e25418cf335c78c2f6.jpg" alt="Mitsubishi Eclipse verde-limão com adesivos, asa traseira alta, rodas pretas, escape esportivo, estilo tunado japonês, cena de corrida noturna">
+                <img src="https://i.pinimg.com/736x/34/65/90/3465904f04e726e25418cf335c78c2f6.jpg" alt="Mitsubishi Eclipse verde">
             </div>
             <div class="car-info">
                 <h2>Mitsubishi Eclipse (1995)</h2>
                 <p>O primeiro carro de Brian O'Conner na franquia, um Eclipse GSX verde-limão que inicialmente ele usava para se infiltrar no mundo das corridas de rua em Los Angeles.</p>
-                
                 <div class="specs">
                     <h3>Especificações Técnicas</h3>
                     <ul>
                         <li><strong>Motor:</strong> 4G63 2.0L Turbo</li>
-                        <li><strong>Potência:</strong> 300 HP (modificado)</li>
+                        <li><strong>Potência:</strong> 300 HP</li>
                         <li><strong>Torque:</strong> 400 Nm</li>
                         <li><strong>Transmissão:</strong> Manual 5 velocidades</li>
                         <li><strong>0-100 km/h:</strong> 5.3 segundos</li>
@@ -271,21 +102,21 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- SKYLINE -->
     <div class="tab-content" id="skyline">
         <div class="car-container">
             <div class="car-image">
-                <img src="https://i.pinimg.com/736x/02/0b/d0/020bd0eab68d8b264d2869bba2a97282.jpg" alt="Nissan Skyline R34 azul-metálico com detalhes em prata, asa traseira GT, rodas BBS, acabamento Nismo, cena de corrida urbana diurna">
+                <img src="https://i.pinimg.com/736x/02/0b/d0/020bd0eab68d8b264d2869bba2a97282.jpg" alt="Nissan Skyline R34 azul">
             </div>
             <div class="car-info">
                 <h2>Nissan Skyline GT-R R34 (1999)</h2>
                 <p>O lendário Skyline R34 que Brian dirigiu em "2 Fast 2 Furious". Com seu icônico azul metálico e rodas BBS, este carro impressiona com tecnologia avançada e desempenho excepcional.</p>
-                
                 <div class="specs">
                     <h3>Especificações Técnicas</h3>
                     <ul>
-                        <li><strong>Motor:</strong> RB26DETT 2.6L Twin-Turbo</li>
-                        <li><strong>Potência:</strong> 500 HP (modificado)</li>
+                        <li><strong>Motor:</strong> RB26DETT</li>
+                        <li><strong>Potência:</strong> 500 HP</li>
                         <li><strong>Torque:</strong> 550 Nm</li>
                         <li><strong>Transmissão:</strong> Manual 6 velocidades</li>
                         <li><strong>0-100 km/h:</strong> 3.8 segundos</li>
@@ -297,20 +128,20 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- RX7 -->
     <div class="tab-content" id="rx7">
         <div class="car-container">
             <div class="car-image">
-                <img src="https://cdn.autopapo.com.br/box/uploads/2022/06/30175029/maxda-rx7-velozes-e-furiosos-3-han.jpg" alt="Mazda RX-7 Veilside laranja metálico, kit de corpo amplo, aerofólio agressivo, rodas de liga leve, estilo drift japonês, cena noturna em Tóquio">
+                <img src="https://cdn.autopapo.com.br/box/uploads/2022/06/30175029/maxda-rx7-velozes-e-furiosos-3-han.jpg" alt="Mazda RX-7 Veilside">
             </div>
             <div class="car-info">
                 <h2>Mazda RX-7 Veilside (1993)</h2>
                 <p>O espetacular RX-7 que Han dirigiu em "The Fast and the Furious: Tokyo Drift". Com seu kit Veilside e motor rotativo, este carro representa o estilo único do drifting japonês.</p>
-                
                 <div class="specs">
                     <h3>Especificações Técnicas</h3>
                     <ul>
-                        <li><strong>Motor:</strong> 13B-REW 1.3L Twin-Rotor Twin-Turbo</li>
+                        <li><strong>Motor:</strong> 13B-REW</li>
                         <li><strong>Potência:</strong> 450 HP</li>
                         <li><strong>Torque:</strong> 400 Nm</li>
                         <li><strong>Transmissão:</strong> Manual 5 velocidades</li>
@@ -323,11 +154,12 @@
             </div>
         </div>
     </div>
-    
+
     <footer>
         <p>© 2025 Velozes e Furiosos - Todos os direitos reservados</p>
     </footer>
-    
+
+    <!-- SCRIPT ORIGINAL -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const tabBtns = document.querySelectorAll('.tab-btn');
@@ -344,5 +176,4 @@
         });
     </script>
 </body>
-
 </html>
